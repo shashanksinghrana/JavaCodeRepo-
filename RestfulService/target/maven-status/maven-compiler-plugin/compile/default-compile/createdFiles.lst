@@ -1,0 +1,10 @@
+ssr\rest\test\model\City.class
+ssr\rest\test\controller\SpringXMLRestController.class
+ssr\rest\test\controller\SpringSimpleRestController.class
+ssr\rest\test\service\impl\CountrySeriveImpl.class
+ssr\rest\test\model\Country.class
+ssr\rest\test\service\impl\CityList.class
+ssr\rest\test\controller\SpringJSONRestController.class
+ssr\rest\test\dao\impl\CountryDaoImpl.class
+ssr\rest\test\dao\CountryDao.class
+ssr\rest\test\service\CountryService.class

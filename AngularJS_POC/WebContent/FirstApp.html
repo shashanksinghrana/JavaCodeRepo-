@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html ng-app="myFirstApp" ng-controller="myCtrl">
+
+
+<head >
+<script	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+
+<body >
+	<div>
+
+<select ng-model="selectedName" ng-options="x for x in names" ng-change = "myOption()">
+</select>
+<p>{{selectedName}} </p>
+</div>
+
+<script>
+var app = angular.module('myFirstApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.names = ["Emil", "Tobias", "Linus"];
+    $scope.myoption = function(){
+    	$scope.selectedName = "Called";
+    }
+});
+</script>
+</body>
+
+</html>
+

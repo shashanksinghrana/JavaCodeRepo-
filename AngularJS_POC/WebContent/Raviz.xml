@@ -1,0 +1,40 @@
+<ArrayOfEmployeeDetailsViewNodel
+	xmlns:i="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://schemas.datacontract.org/2004/07/Xpanxion.Services.Entities">
+	<EmployeeDetailsViewNodel>
+		<DepartmentName>Vivonet</DepartmentName>
+		<DesignationName>Junior Software Engineer</DesignationName>
+		<Email>raviz@xpanxion.co.in</Email>
+		<EmployeeId>953</EmployeeId>
+		<EmployeeStatus>PROBATION</EmployeeStatus>
+		<EmployeeType>REGULAR</EmployeeType>
+		<FirstName>Ravi</FirstName>
+		<FullName>Ravi Kalidas Zadpide</FullName>
+		<Grade>Players</Grade>
+		<Hrms_Status>Active</Hrms_Status>
+		<JoiningDate>2015-04-01T00:00:00</JoiningDate>
+		<LastDate i:nil="true" />
+		<LastName>Zadpide</LastName>
+		<Location>Pune</Location>
+		<ReportingTo>Apurv Jain</ReportingTo>
+	</EmployeeDetailsViewNodel>
+	
+	<EmployeeDetailsViewNodel>
+		<DepartmentName i:nil="true" />
+		<DesignationName>Consultant</DesignationName>
+		<Email>raviz@xpanxion.co.in</Email>
+		<EmployeeId>C-104</EmployeeId>
+		<EmployeeStatus>CONTRACT</EmployeeStatus>
+		<EmployeeType>TEMPORARY</EmployeeType>
+		<FirstName>Ravi</FirstName>
+		<FullName>Ravi Kalidas Zadpide</FullName>
+		<Grade>Players</Grade>
+		<Hrms_Status>InActive</Hrms_Status>
+		<JoiningDate>2014-07-14T00:00:00</JoiningDate>
+		<LastDate>2015-03-31T00:00:00</LastDate>
+		<LastName>Zadpide</LastName>
+		<Location>Pune</Location>
+		<ReportingTo>Mayuresh Sudhir Thakur</ReportingTo>
+	</EmployeeDetailsViewNodel>
+	
+</ArrayOfEmployeeDetailsViewNodel>

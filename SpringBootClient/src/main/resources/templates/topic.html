@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	  <title>Spring Boot - Angularjs Example</title>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="/js/controller.js"></script>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	  
+</head>
+<body>
+
+<div class="container" ng-app="app">
+	<h3 style="color:olive; elevation: below;">Topic Services</h3>
+	<div ng-controller="topicController">
+		<div class="container">
+			<br></br>
+			<button id="btn-id" type="button" class="btn btn-primary" ng-click="getAllTopics();clearAll();">Get All Topics</button>
+			<button id="btn-id" type="button" class="btn btn-primary" ng-click="newTopicFlag = 1 ; allTopicFlag = 0 ; newEditFlag = 0 ; clearAll();">Add New Topic</button>
+			<br></br>
+			<div ng-if = "allTopicFlag">
+			<h3 style="color:olive; elevation: below;">All Topics: </h3>
+			
+			
+				<table class="table table-striped" >
+		    		<thead>
+			    		<tr>
+			    			<th> SNo.</th>
+			    			<th> Topic ID</th>
+			    			<th> Topic Name </th>
+			    			<th> Description</th>
+			    		</tr>
+		    		</thead>
+		    		<tbody>
+			    		<tr ng-repeat="topic in response">
+			    			<td> {{response.indexOf(topic)+1}}</td>
+			    			<td> {{topic.id}}</td>
+			    			<td> {{topic.name}} </td>
+			    			<td> {{topic.description}}</td>
+			    			<td>
+			    				<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-primary" ng-click="loadTopicsByID(response.indexOf(topic))">Edit</button>
+								</div>
+			    			</td>
+			    		</tr>
+			    	</tbody>
+		    	</table>
+		    </div>	
+		</div>
+		<br></br>
+		<div ng-show = "newTopicFlag"> 
+			<form class="form-horizontal" name="newTopicForm" ng-submit="addNewTopic()">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="topicName">Topic ID:</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" name="topicID" id="topicID"
+							placeholder="Enter Topic ID" ng-model="topicID"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="topicName">Topic Name:</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" name="topicName" id="topicName"
+							placeholder="Enter Topic Name" ng-model="topicName"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="description">Description:</label>
+					<div class="col-sm-5">
+						<input type="text" class="form-control" name="description" id="description"
+							placeholder="Enter Description" ng-model="description"/>
+					</div>
+				</div>
+				<div class="form-group" ng-hide = "newEditFlag">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary">Add</button> &nbsp;
+						<button type="button" class="btn btn-primary" ng-click = "clearAll();">Clear</button>
+					</div>				
+				</div>
+				<div class="form-group" ng-show = "newEditFlag">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="button" class="btn btn-primary" ng-click ="updateTopicsByID()">Update</button> &nbsp;
+						<button type="button" class="btn btn-primary" ng-click = "deleteTopicByID(topicID)">Delete</button>
+					</div>				
+				</div>
+			</form>			
+		</div>
+		<div class="col-sm-offset-2 col-sm-10" >
+			<p style="color: green; ">{{postResultMessage}}</p>
+			<p style="color: red;">{{postResultErrorMessage}}</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

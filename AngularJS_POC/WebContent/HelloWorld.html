@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp" ng-controller="HelloController" ng-init="bgcolor='white'">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+
+<body style="background-color:{{bgcolor}}">
+<div >
+
+    <h2>Hello {{helloTo.title}} !</h2>
+    
+    Select the background Color:<select ng-model="bgcolor" ng-options="x for x in colors" ></select>
+    <br><br>
+	<u><b>Calculator:</b></u> 
+	<br><br>
+	Number 1: <input type="text" size="5" ng-model="num1">&nbsp;&nbsp;
+	Number 2: <input type="text" size="5" ng-model="num2"> 
+    <br><br>
+    <button ng-click="add()">Add</button>&nbsp;&nbsp;&nbsp;
+    <button ng-click="sub()">Subtract</button>&nbsp;&nbsp;
+    <button ng-click="multiply()">Multiply</button>&nbsp;&nbsp;
+    <button ng-click="divide()">Divide</button>&nbsp;&nbsp;
+    <button ng-click="reset()">Reset</button>
+    <br><br>
+     Result: <input type = "text" ng-model="result"  value = {{result}}/>
+     <br><br>
+    Any Message: 
+    Yes <input type="radio" ng-model="message.value" value="yes" ng-change="showMessage()">&nbsp;
+    No<input type="radio" ng-model="message.value" value="no" ng-change="showMessage()">
+    <br><br>
+	<span ng-show="anyMessage.value">
+		Message: <br>
+		<textarea cols="35" rows="10"> </textarea>
+	</span>
+    
+
+</div>
+
+
+<script>
+angular.module("myapp", [])
+    .controller("HelloController", function($scope) {
+        $scope.helloTo = {};
+        $scope.helloTo.title = "World, AngularJS";
+        $scope.colors = ["lightgreen","lightblue","lightgrey","lightyellow"];
+        $scope.message={
+        		value : 'no'
+        };
+        $scope.showMessage = function(){
+        	$scope.anyMessage={};
+        	$scope.anyMessage.value = $scope.message.value;	
+        };
+        $scope.add = function(){
+        	if($scope.num1 == null || $scope.num2 == null)
+        		alert("Input field empty!!");
+        	$scope.result = $scope.num1- -$scope.num2;
+        };
+        $scope.sub = function(){
+        	if($scope.num1 == null || $scope.num2 == null)
+        		alert("Input field empty!!");
+        	$scope.result = $scope.num1-$scope.num2;
+        };
+        $scope.multiply = function(){
+        	if($scope.num1 == null || $scope.num2 == null)
+        		alert("Input field empty!!");
+        	$scope.result = $scope.num1*$scope.num2;
+        };
+        $scope.divide = function(){
+        	if($scope.num1 == null || $scope.num2 == null)
+        		alert("Input field empty!!");
+        	$scope.result = $scope.num1/$scope.num2;
+        };
+        $scope.reset = function(){
+        	$scope.result ="";
+        	$scope.num1 ="";
+        	$scope.num2 ="";
+        };
+        } );
+</script>
+</body>
+
+</html>
