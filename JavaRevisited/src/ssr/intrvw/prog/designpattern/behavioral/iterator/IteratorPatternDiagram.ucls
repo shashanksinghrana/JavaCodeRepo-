@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.9" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <interface id="1" language="java" name="ssr.intrvw.prog.designpattern.behavioral.iterator.IContainer" 
+    project="JavaRevisited" file="/JavaRevisited/src/ssr/intrvw/prog/designpattern/behavioral/iterator/IContainer.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="209" x="185" y="252"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="ssr.intrvw.prog.designpattern.behavioral.iterator.IteratorPatternDemo" 
+    project="JavaRevisited" 
+    file="/JavaRevisited/src/ssr/intrvw/prog/designpattern/behavioral/iterator/IteratorPatternDemo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="209" x="185" y="95"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="ssr.intrvw.prog.designpattern.behavioral.iterator.BookContainer.BookIterator" 
+    project="JavaRevisited" 
+    file="/JavaRevisited/src/ssr/intrvw/prog/designpattern/behavioral/iterator/BookContainer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="209" x="434" y="252"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="ssr.intrvw.prog.designpattern.behavioral.iterator.BookContainer" 
+    project="JavaRevisited" 
+    file="/JavaRevisited/src/ssr/intrvw/prog/designpattern/behavioral/iterator/BookContainer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="209" x="434" y="95"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="ssr.intrvw.prog.designpattern.behavioral.iterator.IIterator" 
+    project="JavaRevisited" file="/JavaRevisited/src/ssr/intrvw/prog/designpattern/behavioral/iterator/IIterator.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="209" x="434" y="427"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <nesting id="6">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </nesting>  
+  <realization id="7">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="8">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
